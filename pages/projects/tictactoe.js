@@ -4,17 +4,14 @@ import {
   Link,
   List,
   ListItem,
-  AspectRatio,
   SimpleGrid,
   Text,
-  Divider,
-  useColorModeValue
+  Divider
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, ProjectImage, Meta } from '../../components/project'
 import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
-import NextLink from 'next/link'
 
 const Project = () => (
   <Layout title="Sporter">

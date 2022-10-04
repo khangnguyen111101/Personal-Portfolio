@@ -7,8 +7,6 @@ import {
   Icon,
   Image,
   Link,
-  List,
-  ListItem,
   SimpleGrid,
   useColorModeValue,
   chakra
@@ -19,7 +17,6 @@ import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { EduSection, ExpSection, BioYear } from '../components/bio'
-import { GridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
 import {

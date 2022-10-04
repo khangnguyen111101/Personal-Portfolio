@@ -4,11 +4,9 @@ import {
   Link,
   List,
   ListItem,
-  AspectRatio,
   SimpleGrid,
   Text,
-  Divider,
-  useColorModeValue
+  Divider
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { Title, ProjectImage, Meta } from '../../components/project'
