@@ -16,7 +16,7 @@ import P from '../../components/paragraph'
 import Layout from '../../components/layouts/article'
 import NextLink from 'next/link'
 
-const Work = () => (
+const Project = () => (
   <Layout title="Sporter">
     <Container>
       <Title>
@@ -126,5 +126,5 @@ const Work = () => (
   </Layout>
 )
 
-export default Work
+export default Project
 export { getServerSideProps } from '../../components/chakra'

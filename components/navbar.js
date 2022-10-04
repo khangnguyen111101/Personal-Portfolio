@@ -25,8 +25,8 @@ const LinkItem = ({ href, path, isExternal, children }) => {
     <NextLink href={href} passHref>
       <Link
         p={2}
-        bg={active ? 'luckyPoint' : undefined}
-        color={active ? 'heliotrope' : inactiveColor}
+        bg={active ? useColorModeValue('silverSand', 'luckyPoint') : undefined}
+        // color={active ? 'heliotrope' : inactiveColor}
         isExternal={isExternal}
         borderRadius={10}
       >
