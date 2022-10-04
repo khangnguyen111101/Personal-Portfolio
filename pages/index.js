@@ -4,119 +4,268 @@ import {
   Center,
   Container,
   Heading,
+  Icon,
   Image,
-  useColorModeValue
+  Link,
+  List,
+  ListItem,
+  SimpleGrid,
+  useColorModeValue,
+  chakra
 } from '@chakra-ui/react'
 import { useEffect, useRef } from 'react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { BioSection, BioYear } from '../components/bio'
+import { EduSection, ExpSection, BioYear } from '../components/bio'
+import { GridItem } from '../components/grid-item'
+import Layout from '../components/layouts/article'
 
-const Page = () => {
+import {
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoGithub,
+  IoLogoLinkedin,
+  IoMail
+} from 'react-icons/io5'
+
+const ProfileImage = chakra(Image, {
+  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+})
+
+const Home = () => {
   const ref = useRef(null)
   useEffect(() => {
     import('@lottiefiles/lottie-player')
   })
 
   return (
-    <Container>
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
+    <Layout>
+      <Container>
+        <Box display={{ md: 'flex' }}>
+          <Box flexGrow={1}>
+            <Heading
+              fontFamily="Dancing Script"
+              as="h1"
+              variant="page-title"
+              fontSize={40}
+              // color="coral"
+              bgGradient="linear(to-t, coral, heliotrope)"
+              bgClip="text"
+            >
+              Khang Nguyen
+            </Heading>
+            <p>Software Developer (iOS, Web)</p>
+
+            <Box align="center">
+              <lottie-player
+                id="firstLottie"
+                ref={ref}
+                autoplay="true"
+                loop="true"
+                mode="normal"
+                src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json"
+                style={{ height: '250px', width: '400px' }}
+              />
+            </Box>
+          </Box>
+
+          <Center
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ base: 0, md: 6 }}
+            align="center"
+          >
+            <ProfileImage
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              maxWidth="175px"
+              display="inline-block"
+              borderRadius="xl"
+              alt="Profile Image"
+              src="/images/khang-photo.jpeg"
+            />
+          </Center>
+        </Box>
+
+        <Section delay={0.1}>
           <Heading
-            fontFamily="Dancing Script"
-            as="h1"
-            variant="page-title"
-            fontSize={40}
-            // color="coral"
+            as="h3"
+            variant="section-title"
+            //   color="coral"
             bgGradient="linear(to-t, coral, heliotrope)"
+            fontSize={25}
             bgClip="text"
           >
-            Khang Nguyen
+            Biography
           </Heading>
-          <p>Software Developer (iOS, Web)</p>
+          <Paragraph>
+            Khang is a software engineering student from RMIT University in Ho
+            Chi Minh city, Vietnam with a passion for building software
+            products. He wants contribute his talent to solving real-life
+            problems using technology. Currently, he is focusing on developing
+            iOS and website projects.
+          </Paragraph>
 
-          <Box align="center">
-            <lottie-player
-              id="firstLottie"
-              ref={ref}
-              autoplay="true"
-              loop="true"
-              mode="normal"
-              src="https://assets3.lottiefiles.com/packages/lf20_w51pcehl.json"
-              style={{ height: '250px', width: '400px' }}
-            />
+          <Box align="center" my={4}>
+            <NextLink href="/projects">
+              <Button
+                rightIcon={<ChevronRightIcon />}
+                color={useColorModeValue('coral', 'heliotrope')}
+              >
+                My projects
+              </Button>
+            </NextLink>
           </Box>
-        </Box>
+        </Section>
 
-        <Center
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ base: 0, md: 6 }}
-          align="center"
-        >
-          <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            maxWidth="175px"
-            display="inline-block"
-            borderRadius="xl"
-            alt="Profile Image"
-            src="/images/khang-photo.jpeg"
-          />
-        </Center>
-      </Box>
+        <Section delay={0.2}>
+          <Heading
+            as="h3"
+            variant="section-title"
+            //   color="coral"
+            bgGradient="linear(to-t, coral, heliotrope)"
+            fontSize={25}
+            bgClip="text"
+          >
+            Education
+          </Heading>
 
-      <Section delay={0.1}>
-        <Heading
-          as="h3"
-          variant="section-title"
-          //   color="coral"
-          bgGradient="linear(to-t, coral, heliotrope)"
-          fontSize={25}
-          bgClip="text"
-        >
-          Biography
-        </Heading>
-        <Paragraph>
-          Khang is a software engineering student from RMIT University in Ho Chi
-          Minh city, Vietnam with a passion for building software products. He
-          wants contribute his talent to solving real-life problems using
-          technology. Currently, he is focusing on developing iOS and website
-          projects.
-        </Paragraph>
+          <EduSection mb={3}>
+            <BioYear>2016 - 2019</BioYear>
+            TextTran Dai Nghia High School for the gift, Ho Chi Minh city
+            <br />
+            <i>Specialized Physics</i>
+          </EduSection>
 
-        <Box align="center" my={4}>
-          <NextLink href="/projects">
-            <Button rightIcon={<ChevronRightIcon />} color="coral">
-              My projects
-            </Button>
-          </NextLink>
-        </Box>
-      </Section>
+          <EduSection>
+            <BioYear>2019 - 2023</BioYear>
+            RMIT Vietnam University, Ho Chi Minh city
+            <br />
+            <i>Bachelor of Software Engineer (Honours)</i>
+          </EduSection>
+        </Section>
 
-      <Section delay={0.2}>
-        <BioSection>
-          <BioYear>2001</BioYear>
-          Born in Ho Chi Minh city, Vietnam
-        </BioSection>
+        <Section delay={0.3}>
+          <Heading
+            as="h3"
+            variant="section-title"
+            //   color="coral"
+            bgGradient="linear(to-t, coral, heliotrope)"
+            fontSize={25}
+            bgClip="text"
+          >
+            Work Experience
+          </Heading>
 
-        <BioSection>
-          <BioYear>2019</BioYear>
-          Completed the High School program at Tran Dai Nghia High School for
-          the gift, Ho Chi Minh city, Vietnam <br /> <b>Major:</b> Physics
-        </BioSection>
+          <ExpSection mb={3}>
+            <BioYear>Jul 2019 - Sep 2019</BioYear>
+            Software Tester
+            <br />
+            <NextLink href="https://rta.vn/" passHref scroll={false}>
+              <Link
+                color={useColorModeValue('coral', 'heliotrope')}
+                isExternal={true}
+              >
+                <i>@RTA - Real Time Analytics</i>
+              </Link>
+            </NextLink>
+          </ExpSection>
 
-        <BioSection>
-          <BioYear>2019 - Present</BioYear>
-          Study at RMIT Vietnam University at Ho Chi Minh city
-          <br /> <b>Major:</b> Software Engineering
-        </BioSection>
-      </Section>
-    </Container>
+          <ExpSection>
+            <BioYear>Mar 2021 - Sep 2021</BioYear>
+            QA/QC & Data Engineering Intern
+            <br />
+            <NextLink href="https://rta.vn/" passHref scroll={false}>
+              <Link
+                color={useColorModeValue('coral', 'heliotrope')}
+                isExternal={true}
+              >
+                <i>@RTA - Real Time Analytics</i>
+              </Link>
+            </NextLink>
+          </ExpSection>
+        </Section>
+
+        <Section delay={0.4}>
+          <Heading
+            as="h3"
+            variant="section-title"
+            //   color="coral"
+            bgGradient="linear(to-t, coral, heliotrope)"
+            fontSize={25}
+            bgClip="text"
+          >
+            Connections
+          </Heading>
+
+          <SimpleGrid columns={2} spacingX={10} spacingY={3}>
+            <Link href="https://github.com/khangnguyen111101" target="_blank">
+              <Button
+                variant="ghost"
+                color={useColorModeValue('coral', 'heliotrope')}
+                leftIcon={<Icon as={IoLogoGithub} />}
+              >
+                GitHub
+              </Button>
+            </Link>
+
+            <Link
+              href="https://www.instagram.com/burger.de.king/"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                color={useColorModeValue('coral', 'heliotrope')}
+                leftIcon={<Icon as={IoLogoInstagram} />}
+              >
+                Instagram
+              </Button>
+            </Link>
+
+            <Link
+              href="https://www.facebook.com/khang.nguyen.712161/"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                color={useColorModeValue('coral', 'heliotrope')}
+                leftIcon={<Icon as={IoLogoFacebook} />}
+              >
+                Facebook
+              </Button>
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/in/khangnguyen111101/"
+              target="_blank"
+            >
+              <Button
+                variant="ghost"
+                color={useColorModeValue('coral', 'heliotrope')}
+                leftIcon={<Icon as={IoLogoLinkedin} />}
+              >
+                LinkedIn
+              </Button>
+            </Link>
+
+            <Link href="mailto:khangnguyen111101@gmail.com" target="_blank">
+              <Button
+                variant="ghost"
+                color={useColorModeValue('coral', 'heliotrope')}
+                leftIcon={<Icon as={IoMail} />}
+              >
+                khangnguyen111101@gmail
+              </Button>
+            </Link>
+          </SimpleGrid>
+        </Section>
+      </Container>
+    </Layout>
   )
 }
 
-export default Page
+export default Home
+export { getServerSideProps } from '../components/chakra'

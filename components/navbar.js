@@ -74,10 +74,6 @@ const Navbar = props => {
             Projects
           </LinkItem>
 
-          <LinkItem href="/about" path={path}>
-            About
-          </LinkItem>
-
           <LinkItem
             href="https://github.com/khangnguyen111101/Personal-Portfolio"
             isExternal="true"
@@ -103,10 +99,6 @@ const Navbar = props => {
 
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
-                </NextLink>
-
-                <NextLink href="/about" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
                 </NextLink>
 
                 <NextLink

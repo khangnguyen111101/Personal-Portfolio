@@ -16,7 +16,7 @@ const Logo = () => {
     <Link href="/">
       <a>
         <LogoBox>
-          <Text color="heliotrope" ml={3}>
+          <Text color={useColorModeValue('coral', 'heliotrope')} ml={3}>
             Welcome
           </Text>
         </LogoBox>
