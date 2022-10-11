@@ -132,7 +132,7 @@ const Home = () => {
 
           <EduSection mb={3}>
             <BioYear>2016 - 2019</BioYear>
-            TextTran Dai Nghia High School for the gift, Ho Chi Minh city
+            Tran Dai Nghia High School for the gift, Ho Chi Minh city
             <br />
             <i>Specialized Physics</i>
           </EduSection>
