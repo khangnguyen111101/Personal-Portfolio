@@ -22,12 +22,11 @@ const Project = () => (
         Scrumified is a light version of Jira for RMIT students in SE/IT major
         to practice project management in Scrum with sufficient tools but easier
         to use. Users can create stories/tasks in backlog with detailed
-        guideline in `&quot;`Defination of Done`&quot;` and `&quot;`Story
-        Point`&quot;`. An active sprint will be managed by a Kanban board, and
-        every sprint will be archived for the team to visualize their progress.
-        Personalized dashboard to manage all projects with corresponding
-        assigned tasks, and profile section to manage personal information were
-        also well supported.
+        guideline in &quot;Defination of Done&quot; and &quot;Story Point&quot;.
+        An active sprint will be managed by a Kanban board, and every sprint
+        will be archived for the team to visualize their progress. Personalized
+        dashboard to manage all projects with corresponding assigned tasks, and
+        profile section to manage personal information were also well supported.
       </P>
       <P>
         This is a very first fullstack project from zero to hero that I worked
