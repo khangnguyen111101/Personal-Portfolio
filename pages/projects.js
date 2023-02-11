@@ -18,18 +18,6 @@ const Projects = () => {
   return (
     <Layout title="Projects">
       <Container>
-        <Box align="center">
-          <lottie-player
-            id="firstLottie"
-            ref={ref}
-            autoplay="true"
-            loop="true"
-            mode="normal"
-            src="https://assets2.lottiefiles.com/packages/lf20_doyhajlr.json"
-            style={{ height: '250px', width: '400px' }}
-          />
-        </Box>
-
         <Heading
           as="h3"
           variant="section-title"

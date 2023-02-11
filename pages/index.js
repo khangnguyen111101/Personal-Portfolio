@@ -46,14 +46,13 @@ const Home = () => {
               fontFamily="Dancing Script"
               as="h1"
               variant="page-title"
-              fontSize={40}
-              // color="coral"
+              fontSize={50}
               bgGradient="linear(to-t, coral, heliotrope)"
               bgClip="text"
             >
               Khang Nguyen
             </Heading>
-            <p>Software Developer (iOS, Web)</p>
+            <p>Software Engineer Student</p>
 
             <Box align="center">
               <lottie-player
@@ -75,12 +74,12 @@ const Home = () => {
             align="center"
           >
             <ProfileImage
-              borderColor="whiteAlpha.800"
+              // borderColor="heliocope"
               borderWidth={2}
               borderStyle="solid"
-              maxWidth="175px"
+              maxWidth="300px"
               display="inline-block"
-              borderRadius="xl"
+              borderRadius="full"
               alt="Profile Image"
               src="/images/khang-photo.jpeg"
             />
@@ -102,8 +101,7 @@ const Home = () => {
             Khang is a software engineering student from RMIT University in Ho
             Chi Minh city, Vietnam with a passion for building software
             products. He wants contribute his talent to solving real-life
-            problems using technology. Currently, he is focusing on developing
-            iOS and website projects.
+            problems using technology.
           </Paragraph>
 
           <Box align="center" my={4}>
@@ -145,7 +143,23 @@ const Home = () => {
           </EduSection>
         </Section>
 
-        <Section delay={0.3}>
+        {/* <Section delay={0.3}>
+          <Heading
+            as="h3"
+            variant="section-title"
+            //   color="coral"
+            bgGradient="linear(to-t, coral, heliotrope)"
+            fontSize={25}
+            bgClip="text"
+          >
+            Achievements
+          </Heading>
+
+          <Box mb={3}>WRO 2019 Bronze Medal</Box>
+          <Box mb={3}>RMIT Scholarship for Current student</Box>
+        </Section> */}
+
+        <Section delay={0.4}>
           <Heading
             as="h3"
             variant="section-title"
@@ -186,7 +200,7 @@ const Home = () => {
           </ExpSection>
         </Section>
 
-        <Section delay={0.4}>
+        <Section delay={0.5}>
           <Heading
             as="h3"
             variant="section-title"
