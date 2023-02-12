@@ -9,14 +9,21 @@ import {
   Link,
   SimpleGrid,
   useColorModeValue,
-  chakra
+  chakra,
+  UnorderedList,
+  ListItem
 } from '@chakra-ui/react'
 import { useEffect, useRef } from 'react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { EduSection, ExpSection, BioYear } from '../components/bio'
+import {
+  EduSection,
+  ExpSection,
+  BioYear,
+  AchievementSection
+} from '../components/bio'
 import Layout from '../components/layouts/article'
 
 import {
@@ -143,7 +150,7 @@ const Home = () => {
           </EduSection>
         </Section>
 
-        {/* <Section delay={0.3}>
+        <Section delay={0.3}>
           <Heading
             as="h3"
             variant="section-title"
@@ -155,9 +162,21 @@ const Home = () => {
             Achievements
           </Heading>
 
-          <Box mb={3}>WRO 2019 Bronze Medal</Box>
-          <Box mb={3}>RMIT Scholarship for Current student</Box>
-        </Section> */}
+          <AchievementSection mb={3}>
+            <BioYear>2018</BioYear>
+            Gold Medal - Robotics - Ho Chi Minh city Olympics for Students
+          </AchievementSection>
+
+          <AchievementSection mb={3}>
+            <BioYear>2018</BioYear>
+            Bronze Medal - Vietnam WRO Robotacons
+          </AchievementSection>
+
+          <AchievementSection>
+            <BioYear>2021</BioYear>
+            RMIT Academic Achievement Scholarship for Current Students
+          </AchievementSection>
+        </Section>
 
         <Section delay={0.4}>
           <Heading
@@ -171,7 +190,7 @@ const Home = () => {
             Work Experience
           </Heading>
 
-          <ExpSection mb={3}>
+          <ExpSection>
             <BioYear>Jul 2019 - Sep 2019</BioYear>
             Software Tester
             <br />
@@ -184,6 +203,15 @@ const Home = () => {
               </Link>
             </NextLink>
           </ExpSection>
+
+          <Box mb={3}>
+            <UnorderedList>
+              <ListItem>
+                Inital, design and execute test plans for Mobile and Web
+                applications.
+              </ListItem>
+            </UnorderedList>
+          </Box>
 
           <ExpSection>
             <BioYear>Mar 2021 - Sep 2021</BioYear>
@@ -198,6 +226,19 @@ const Home = () => {
               </Link>
             </NextLink>
           </ExpSection>
+
+          <Box>
+            <UnorderedList>
+              <ListItem>
+                Design and execute automation test plans for Mobile and Web
+                applications.
+              </ListItem>
+              <ListItem>
+                Design and execute Python script for data scraping using
+                frameworks like Scrappy and BeautifulSoup.
+              </ListItem>
+            </UnorderedList>
+          </Box>
         </Section>
 
         <Section delay={0.5}>

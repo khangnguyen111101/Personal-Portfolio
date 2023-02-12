@@ -14,3 +14,8 @@ export const BioYear = styled.span`
   font-weight: bold;
   margin-right: 1em;
 `
+
+export const AchievementSection = styled(Box)`
+  padding-left: 6.8em;
+  text-indent: -6.8em;
+`

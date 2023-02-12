@@ -8,6 +8,7 @@ import TicTacToeThumbnail from '../public/images/tictactoe-thumb.png'
 import ScrumifiedThumbnail from '../public/images/scrumified-thumb.png'
 import { useEffect, useRef } from 'react'
 import Layout from '../components/layouts/article'
+import Paragraph from '../components/paragraph'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -27,6 +28,14 @@ const Projects = () => {
         >
           Projects
         </Heading>
+
+        <Section>
+          <Paragraph>
+            Khang plays various roles in his school projects. From front-end to
+            back-end developer in Webapp projects to full-stack developer in
+            Mobile(iOS) projects.
+          </Paragraph>
+        </Section>
 
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
