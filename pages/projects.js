@@ -6,16 +6,10 @@ import SporterThumbnail from '../public/images/sporter-thumb.png'
 import CatPicThumbnail from '../public/images/catpic-thumb.png'
 import TicTacToeThumbnail from '../public/images/tictactoe-thumb.png'
 import ScrumifiedThumbnail from '../public/images/scrumified-thumb.png'
-import { useEffect, useRef } from 'react'
 import Layout from '../components/layouts/article'
 import Paragraph from '../components/paragraph'
 
 const Projects = () => {
-  const ref = useRef(null)
-  useEffect(() => {
-    import('@lottiefiles/lottie-player')
-  })
-
   return (
     <Layout title="Projects">
       <Container>

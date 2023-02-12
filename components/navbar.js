@@ -17,7 +17,7 @@ import {
 } from '@chakra-ui/react'
 import ThemeToggleButton from './theme-button.js'
 
-const LinkItem = ({ href, path, isExternal, children }) => {
+const LinkItem = ({ href, isExternal, children }) => {
   // const active = path === href
   // const buttonColor = useColorModeValue('silverSand', 'luckyPoint')
 
