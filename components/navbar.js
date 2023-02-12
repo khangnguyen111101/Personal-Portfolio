@@ -18,7 +18,7 @@ import {
 import ThemeToggleButton from './theme-button.js'
 
 const LinkItem = ({ href, path, isExternal, children }) => {
-  const active = path === href
+  // const active = path === href
   // const buttonColor = useColorModeValue('silverSand', 'luckyPoint')
 
   return (
